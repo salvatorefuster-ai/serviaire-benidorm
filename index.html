@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviaire - Expertos en Climatización y Aire Acondicionado en Benidorm</title>
+    <meta name="description"
+        content="Serviaire Benidorm: Líderes en instalación, mantenimiento y reparación de aire acondicionado y sistemas VRV. Servicio profesional en toda la Marina Alta.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-fan"></i></span>
+                <div class="logo-text">
+                    SERVIAIRE
+                    <span class="logo-sub">CLIMATIZACIÓN</span>
+                </div>
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto" class="btn btn-primary" id="open-quote-modal-nav">Pedir Presupuesto</a>
+            </nav>
+
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="fade-in-up">Expertos en <span class="highlight">Climatización</span> y Confort</h1>
+            <p class="fade-in-up delay-100">Soluciones integrales de aire acondicionado, VRV y mantenimiento para
+                hogares y empresas en Benidorm y Marina Alta.</p>
+            <div class="hero-buttons fade-in-up delay-200">
+                <a href="#contacto" class="btn btn-primary btn-lg"
+                    onclick="document.getElementById('open-quote-modal-nav').click(); return false;">Solicitar
+                    Presupuesto <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#servicios" class="btn btn-outline btn-lg">Nuestros Servicios</a>
+            </div>
+
+            <div class="hero-stats fade-in-up delay-300">
+                <div class="stat-item">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span>Técnicos Autorizados</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Respuesta Rápida</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-gem"></i>
+                    <span>Calidad Garantizada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h3 class="text-gray mb-4">Trabajamos con las mejores marcas</h3>
+            <div class="brands-grid">
+                <div class="brand-item">MITSUBISHI</div>
+                <div class="brand-item">DAIKIN</div>
+                <div class="brand-item">FUJITSU</div>
+                <div class="brand-item">PANASONIC</div>
+                <div class="brand-item">LG</div>
+                <div class="brand-item">SAMSUNG</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="valores" class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>¿Por qué elegir Serviaire?</h2>
+                <div class="divider mx-auto"></div>
+                <p>Compromiso, calidad y eficiencia en cada proyecto.</p>
+            </div>
+
+            <div class="grid-4">
+                <div class="card value-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3>Asesoramiento</h3>
+                    <p>Seguimiento integral de su proyecto desde el diseño hasta la puesta en marcha, garantizando la
+                        mejor solución.</p>
+                </div>
+                <div class="card value-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Fiabilidad</h3>
+                    <p>Presupuestos transparentes y a su medida. Sin sorpresas, con la garantía de una empresa
+                        consolidada.</p>
+                </div>
+                <div class="card value-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3>Eficiencia</h3>
+                    <p>Priorizamos el ahorro energético utilizando sistemas de vanguardia y materiales de máxima
+                        calidad.</p>
+                </div>
+                <div class="card value-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h3>Garantía</h3>
+                    <p>Contamos con un equipo de técnicos autorizados y experimentados para su total tranquilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <div class="divider"></div>
+                <p>Soluciones profesionales para todo tipo de necesidades de climatización.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="service-card reveal">
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                        <h3>Volumen de Refrigerante Variable (VRV)</h3>
+                        <p>Sistemas ideales para grandes superficies como hoteles, centros comerciales y naves
+                            industriales. Permite conectar múltiples unidades interiores con regulación independiente,
+                            optimizando el confort y el consumo.</p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> Alta eficiencia energética</li>
+                            <li><i class="fa-solid fa-check"></i> Control zonificado</li>
+                            <li><i class="fa-solid fa-check"></i> Ideal grandes proyectos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fa-solid fa-snowflake"></i></div>
+                        <h3>Aire Acondicionado Doméstico y Comercial</h3>
+                        <p>Venta e instalación de las mejores marcas del mercado. Diseñamos la climatización de su hogar
+                            o negocio para asegurar el máximo confort estético y térmico.</p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> Splits y conductos</li>
+                            <li><i class="fa-solid fa-check"></i> Diseño estético</li>
+                            <li><i class="fa-solid fa-check"></i> Primeras marcas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fa-solid fa-tools"></i></div>
+                        <h3>Mantenimiento y Reparación</h3>
+                        <p>Servicio técnico rápido y eficaz. Sabemos que una avería no puede esperar, por eso
+                            priorizamos la rapidez en la asistencia. Mantenimiento preventivo para alargar la vida de
+                            sus equipos.</p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> Reparación multimarca</li>
+                            <li><i class="fa-solid fa-check"></i> Mantenimiento preventivo</li>
+                            <li><i class="fa-solid fa-check"></i> Respuesta rápida</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card reveal special-card">
+                    <div class="service-bg"></div>
+                    <div class="service-content">
+                        <h3>¿Necesita una solución a medida?</h3>
+                        <p>Realizamos estudios personalizados para optimizar la climatización de su espacio.</p>
+                        <a href="#contacto" class="btn btn-white btn-lg mt-4">Contactar Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proyectos Recientes</h2>
+                <div class="divider"></div>
+                <p>Nuestra experiencia habla por sí misma. Echa un vistazo a nuestros últimos trabajos.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="project-card reveal">
+                    <img src="./vrv_commercial_roof.png" alt="Instalación VRV Industrial" class="project-img">
+                    <div class="project-info">
+                        <h3>Instalación VRV Hotel</h3>
+                        <p>Sistema centralizado de alta eficiencia para complejo hotelero en Benidorm.</p>
+                    </div>
+                </div>
+                <div class="project-card reveal delay-100">
+                    <img src="./ac_bedroom_interior.png" alt="Aire Acondicionado Doméstico" class="project-img">
+                    <div class="project-info">
+                        <h3>Climatización Residencial</h3>
+                        <p>Instalación estética y silenciosa para vivienda moderna.</p>
+                    </div>
+                </div>
+                <div class="project-card reveal delay-200">
+                    <img src="./technician_maintenance_close.png" alt="Mantenimiento Técnico" class="project-img">
+                    <div class="project-info">
+                        <h3>Mantenimiento Preventivo</h3>
+                        <p>Revisión técnica y calibración para asegurar el máximo rendimiento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Lo que dicen nuestros clientes</h2>
+                <div class="divider mx-auto"></div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Excelente servicio. Instalaron el aire acondicionado en mi casa en tiempo récord y dejaron todo
+                        impecable. Muy recomendables."</p>
+                    <div class="author">- Carlos M., Benidorm</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Llevan el mantenimiento de nuestra empresa desde hace años. Respuesta rápida ante cualquier
+                        avería. Son profesionales de confianza."</p>
+                    <div class="author">- Laura G., Gerente Hotel</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Me asesoraron muy bien sobre qué máquina poner para ahorrar luz. Estoy encantada con el
+                        resultado y el trato recibido."</p>
+                    <div class="author">- Antonio R., Finestrat</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Ofrecen presupuesto gratuito?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, realizamos visitas y presupuestos totalmente gratuitos y sin compromiso para evaluar sus
+                            necesidades de climatización.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Qué marcas de aire acondicionado instalan?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabajamos con las principales marcas del mercado como Mitsubishi Electric, Daikin, Fujitsu,
+                            Panasonic, LG y Samsung, garantizando siempre la mejor calidad y servicio post-venta.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cuánto tiempo tardan en realizar una instalación?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para una instalación doméstica estándar (tipo split), solemos tardar entre 3 y 5 horas. Para
+                            proyectos más grandes o sistemas por conductos, evaluamos el tiempo en el presupuesto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2>Listo para mejorar su climatización?</h2>
+            <p>Pida su presupuesto sin compromiso hoy mismo.</p>
+            <a href="tel:663036070" class="btn btn-primary btn-lg"><i class="fa-solid fa-phone"></i> Llamar al 663 036
+                070</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <div class="grid-contact">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <h2>Contacto</h2>
+                        <div class="divider"></div>
+                        <p>Estamos aquí para ayudarle. Visítenos o envíenos un mensaje.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Avd. Alfonso Puchades, 9, Local 7<br>03501 Benidorm (Alicante)</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p><a href="tel:663036070">663 036 070</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:serviaireventas@telefonica.net">serviaireventas@telefonica.net</a></p>
+                        </div>
+                    </div>
+
+                    <div class="map-placeholder">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3122.656799052069!2d-0.1345474!3d38.5414848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6205739812674f%3A0xe677569921470404!2sAv.%20Alfonso%20Puchades%2C%209%2C%2003501%20Benidorm%2C%20Alicante!5e0!3m2!1sen!2ses!4v1709220000000!5m2!1sen!2ses"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3>Envíenos un mensaje</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" placeholder="Su nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="su@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" placeholder="Su teléfono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" rows="5" placeholder="¿En qué podemos ayudarle?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/34663036070" target="_blank" class="float-whatsapp" aria-label="Chat en WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-text text-white">
+                    SERVIAIRE
+                    <span class="logo-sub text-primary">CLIMATIZACIÓN</span>
+                </div>
+                <p>&copy; 2024 Serviaire Benidorm. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookies Banner -->
+    <div id="cookies-banner" class="cookies-banner">
+        <div class="cookies-content">
+            <p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios y su experiencia de navegación.
+                Si continúa navegando, consideramos que acepta su uso.</p>
+            <div class="cookies-buttons">
+                <button id="accept-cookies" class="btn btn-primary btn-sm">Aceptar</button>
+                <button id="reject-cookies" class="btn btn-outline btn-sm"
+                    style="border-color: #ddd; color: #333;">Rechazar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Modal -->
+    <div id="quote-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Solicitud de Presupuesto Rápido</h2>
+                <div class="divider"></div>
+            </div>
+            <form id="quote-form">
+                <div class="form-step active" data-step="1">
+                    <h3>1. ¿Qué servicio necesita?</h3>
+                    <div class="option-grid">
+                        <label class="option-card">
+                            <input type="radio" name="service" value="instalacion" required>
+                            <span class="opt-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                            <span class="opt-text">Instalación Nueva</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="service" value="reparacion" required>
+                            <span class="opt-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                            <span class="opt-text">Reparación / Avería</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="service" value="mantenimiento" required>
+                            <span class="opt-icon"><i class="fa-solid fa-clipboard-check"></i></span>
+                            <span class="opt-text">Mantenimiento</span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary next-step">Siguiente</button>
+                </div>
+
+                <div class="form-step" data-step="2">
+                    <h3>2. Tipo de Inmueble</h3>
+                    <div class="option-grid">
+                        <label class="option-card">
+                            <input type="radio" name="property" value="piso" required>
+                            <span class="opt-icon"><i class="fa-solid fa-building"></i></span>
+                            <span class="opt-text">Piso / Apartamento</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="property" value="chalet" required>
+                            <span class="opt-icon"><i class="fa-solid fa-house"></i></span>
+                            <span class="opt-text">Chalet / Unifamiliar</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="property" value="local" required>
+                            <span class="opt-icon"><i class="fa-solid fa-shop"></i></span>
+                            <span class="opt-text">Local / Oficina</span>
+                        </label>
+                    </div>
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-outline prev-step"
+                            style="background:#f0f0f0; color:#333; border:none;">Atrás</button>
+                        <button type="button" class="btn btn-primary next-step">Siguiente</button>
+                    </div>
+                </div>
+
+                <div class="form-step" data-step="3">
+                    <h3>3. Sus Datos de Contacto</h3>
+                    <div class="form-group">
+                        <input type="text" name="modal-name" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="modal-phone" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="modal-notes" placeholder="Detalles adicionales (opcional)"></textarea>
+                    </div>
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-outline prev-step"
+                            style="background:#f0f0f0; color:#333; border:none;">Atrás</button>
+                        <button type="submit" class="btn btn-primary">Solicitar Presupuesto</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
