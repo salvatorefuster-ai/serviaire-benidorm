@@ -1434,12 +1434,16 @@ footer {
 
     /* Typography */
     h1 {
-        font-size: 2rem;
-        line-height: 1.2;
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+        /* Fluid sizing */
+        line-height: 1.1;
+        word-wrap: break-word;
+        /* Prevent overflow */
+        hyphens: auto;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     h3 {
