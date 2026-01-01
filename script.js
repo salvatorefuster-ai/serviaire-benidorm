@@ -134,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Quote Modal Submission
+    const QuoteForm = document.getElementById('quote-form');
     if (QuoteForm) {
         QuoteForm.addEventListener('submit', (e) => {
             e.preventDefault();
