@@ -1385,48 +1385,132 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+/* Responsive Design System */
+
+/* Tablet & Smaller Desktop */
+@media (max-width: 1024px) {
+    :root {
+        --container: 90%;
+    }
+
     h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
-    .grid-contact {
-        grid-template-columns: 1fr;
+    .hero {
+        height: auto;
+        min-height: 600px;
+        padding: 8rem 0 4rem;
     }
 
-    .hero-content {
-        margin-left: 2rem;
-        margin-right: 2rem;
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Mobile Devices */
 @media (max-width: 768px) {
+    :root {
+        --radius: 16px;
+    }
+
+    /* Navigation */
     .desktop-nav {
         display: none;
     }
 
     .mobile-toggle {
         display: block;
+        padding: 0.5rem;
     }
 
+    .mobile-menu {
+        width: 100%;
+        max-width: 100%;
+        padding: 6rem 1.5rem 2rem;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+    }
+
+    /* Typography */
     h1 {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
+        line-height: 1.2;
     }
 
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /* Layout */
+    .section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-contact,
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Hero Section */
     .hero {
-        min-height: 500px;
-        height: auto;
-        padding: 6rem 0;
+        text-align: center;
+        padding: 7rem 0 4rem;
+        background-position: 70% center;
+        /* Adjust image focus */
+    }
+
+    .hero-content {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .hero-stats {
-        flex-wrap: wrap;
-        gap: 1rem;
+        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
     }
 
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
+    .stat-item {
+        justify-content: center;
+    }
+
+    /* Components */
+    .card,
+    .service-card,
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .service-content {
+        padding: 1.5rem;
     }
 
     .brands-grid {
@@ -1434,6 +1518,71 @@ footer {
     }
 
     .brand-item {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        width: 45%;
+        /* 2 columns for brands */
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Floating Button */
+    .float-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn-lg {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .option-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .option-card {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 1rem;
+    }
+
+    .cookies-content {
+        flex-direction: column;
+    }
+
+    .cookies-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cookies-buttons .btn {
+        width: 100%;
     }
 }
