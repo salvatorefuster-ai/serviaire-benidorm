@@ -7,7 +7,7 @@
 
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.google.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self' https://www.google-analytics.com https://formspree.io;">
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.google.com https://www.googletagmanager.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: https://maps.googleapis.com https://maps.gstatic.com; frame-src https://www.google.com https://www.google.com/maps/embed; connect-src 'self' https://www.google-analytics.com https://formspree.io https://maps.googleapis.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
@@ -481,19 +481,20 @@
                     <form class="contact-form">
                         <div class="form-group">
                             <label for="name">Nombre</label>
-                            <input type="text" id="name" placeholder="Su nombre" required>
+                            <input type="text" id="name" name="name" placeholder="Su nombre" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="su@email.com" required>
+                            <input type="email" id="email" name="email" placeholder="su@email.com" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone" placeholder="Su teléfono" required>
+                            <input type="tel" id="phone" name="phone" placeholder="Su teléfono" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Mensaje</label>
-                            <textarea id="message" rows="5" placeholder="¿En qué podemos ayudarle?" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="¿En qué podemos ayudarle?"
+                                required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
                     </form>
