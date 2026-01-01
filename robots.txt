@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://serviaire-benidorm.onrender.com/sitemap.xml
