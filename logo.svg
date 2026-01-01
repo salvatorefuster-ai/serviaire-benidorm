@@ -1,32 +1,31 @@
 <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Main circle background -->
-  <circle cx="100" cy="100" r="95" fill="white"/>
-  
-  <!-- Outer border circle -->
-  <circle cx="100" cy="100" r="95" fill="none" stroke="#e0e0e0" stroke-width="2"/>
-  
-  <!-- Orange segment 1 - Top left curved blade -->
-  <path d="M 100 100 L 40 25 A 95 95 0 0 1 100 5 L 100 100 Z" 
-        fill="#FF5722"/>
-  
-  <!-- Orange segment 2 - Top right curved blade -->
-  <path d="M 100 100 L 100 5 A 95 95 0 0 1 175 75 L 100 100 Z" 
-        fill="#FF6B35"/>
-  
-  <!-- Orange segment 3 - Bottom left curved blade -->
-  <path d="M 100 100 L 25 160 A 95 95 0 0 0 40 25 L 100 100 Z" 
-        fill="#EF5012"/>
-  
-  <!-- White curved dividers for depth and separation -->
-  <path d="M 100 100 L 40 25 Q 38 23 40 21 A 93 93 0 0 1 100 5 Q 102 5 100 7 L 100 100 Z" 
-        fill="white" opacity="0.4" stroke="white" stroke-width="1"/>
-  
-  <path d="M 100 100 L 100 5 Q 102 5 104 7 A 93 93 0 0 1 175 75 Q 177 77 175 79 L 100 100 Z" 
-        fill="white" opacity="0.4" stroke="white" stroke-width="1"/>
-  
-  <path d="M 100 100 L 25 160 Q 23 162 21 160 A 93 93 0 0 1 40 25 Q 42 23 44 25 L 100 100 Z" 
-        fill="white" opacity="0.4" stroke="white" stroke-width="1"/>
-  
-  <!-- Subtle shadow for depth -->
-  <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+  <!-- Group for the main icon body -->
+  <g transform="translate(10, 10) scale(0.9)">
+      
+      <!-- Black Orbital Arcs (Motion Swishes) -->
+      <!-- Left Arc -->
+      <path d="M 30 60 A 100 100 0 0 0 30 140" 
+            fill="none" stroke="#2d3748" stroke-width="4" stroke-linecap="round"/>
+      
+      <!-- Right Arc -->
+      <path d="M 170 60 A 100 100 0 0 1 170 140" 
+            fill="none" stroke="#2d3748" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- Main Orange Sphere Base -->
+      <circle cx="100" cy="100" r="65" fill="#FF5722"/>
+      
+      <!-- The White "Cross" Cuts to create the 4 blades -->
+      <!-- Vertical curve cut -->
+      <path d="M 100 20 Q 115 100 100 180" 
+            fill="none" stroke="white" stroke-width="8" stroke-linecap="round"/>
+            
+      <!-- Horizontal curve cut -->
+      <path d="M 20 100 Q 100 85 180 100" 
+            fill="none" stroke="white" stroke-width="8" stroke-linecap="round"/>
+            
+      <!-- Center cleanup to ensure sharp intersection -->
+      <circle cx="100" cy="100" r="6" fill="white"/>
+
+      <!-- Re-add orange shading for slight 3D feel on the segments if needed, but flat is safer for 'exact' match -->
+  </g>
 </svg>
