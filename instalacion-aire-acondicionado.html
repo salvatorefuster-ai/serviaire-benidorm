@@ -134,10 +134,19 @@
             style="background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('./ac_bedroom_interior.webp') no-repeat center center/cover;">
             <div class="container text-center">
                 <nav class="breadcrumbs" aria-label="Migas de pan"
-                    style="margin-bottom: 2rem; display: flex; justify-content: center; gap: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
-                    <a href="index.html" style="color: white; text-decoration: none;">Inicio</a>
+                    style="margin-bottom: 2rem; display: flex; justify-content: center; gap: 0.5rem; font-size: 0.9rem; opacity: 0.8;"
+                    itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="index.html" itemprop="item" style="color: white; text-decoration: none;">
+                            <span itemprop="name">Inicio</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </span>
                     <span style="color: rgba(255,255,255,0.5);">/</span>
-                    <span style="color: var(--primary-light);">Instalación Aire</span>
+                    <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name" style="color: var(--primary-light);">Instalación Aire</span>
+                        <meta itemprop="position" content="2" />
+                    </span>
                 </nav>
                 <h1 class="fade-in-up">Instalación de Aire Acondicionado</h1>
                 <p class="fade-in-up delay-100" style="max-width: 700px; margin: 0 auto; opacity: 0.9;">
@@ -265,15 +274,27 @@
             </div>
         </section>
 
-        <!-- Brands Trust Strip -->
-        <section class="bg-gray-light py-5" style="padding: 3rem 0; background-color: #f8fafc;">
+        <!-- Brands Section -->
+        <section class="section"
+            style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 3rem 0;">
             <div class="container text-center">
-                <h4 class="text-gray mb-4">Instaladores Oficiales de</h4>
-                <div class="brands-grid" style="opacity: 0.7;">
-                    <div class="brand-item" style="font-weight: 700;">MITSUBISHI ELECTRIC</div>
-                    <div class="brand-item" style="font-weight: 700;">DAIKIN</div>
-                    <div class="brand-item" style="font-weight: 700;">FUJITSU</div>
-                    <div class="brand-item" style="font-weight: 700;">TOSHIBA</div>
+                <p
+                    style="text-align: center; color: var(--gray); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2.5rem;">
+                    Instalamos las mejores marcas</p>
+                <div
+                    style="display: flex; justify-content: space-around; align-items: center; gap: 3rem; flex-wrap: wrap; opacity: 0.6; filter: grayscale(100%);">
+                    <span
+                        style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem; color: #334155;">DAIKIN</span>
+                    <span
+                        style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem; color: #334155;">MITSUBISHI</span>
+                    <span
+                        style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem; color: #334155;">FUJITSU</span>
+                    <span
+                        style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem; color: #334155;">PANASONIC</span>
+                    <span
+                        style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem; color: #334155;">SAMSUNG</span>
+                    <span
+                        style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem; color: #334155;">LG</span>
                 </div>
             </div>
         </section>

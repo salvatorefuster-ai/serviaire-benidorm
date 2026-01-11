@@ -1705,6 +1705,63 @@ textarea.error+.form-error-message {
     transform: translateY(-5px);
 }
 
+/* Floating WhatsApp Pulse */
+.float-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.float-whatsapp::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+.float-whatsapp:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
+
+/* Trust Badge Sticky Polish */
+.trust-badge:hover {
+    transform: translateX(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    background: #fdfdfd !important;
+}
+
+
 /* Enhanced Reveal Animation */
 .reveal {
     opacity: 0;
