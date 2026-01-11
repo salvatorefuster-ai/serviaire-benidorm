@@ -1,27 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://serviaire-benidorm.onrender.com/</loc>
-    <lastmod>2026-01-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <loc>https://www.serviairebenidorm.es/</loc>
+    <lastmod>2026-01-10</lastmod>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://serviaire-benidorm.onrender.com/politica-privacidad.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
+    <loc>https://www.serviairebenidorm.es/sobre-nosotros.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://serviaire-benidorm.onrender.com/aviso-legal.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
+    <loc>https://www.serviairebenidorm.es/proyectos.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://serviaire-benidorm.onrender.com/politica-cookies.html</loc>
-    <lastmod>2026-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
+    <loc>https://www.serviairebenidorm.es/instalacion-aire-acondicionado.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.serviairebenidorm.es/mantenimiento-aire-acondicionado-benidorm.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.serviairebenidorm.es/sistemas-vrv-hoteles-benidorm.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.serviairebenidorm.es/ahorra-30-aire-acondicionado.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.serviairebenidorm.es/mantenimiento-filtros-guia.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.serviairebenidorm.es/beneficios-vrv-hoteles.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <priority>0.70</priority>
   </url>
 </urlset>

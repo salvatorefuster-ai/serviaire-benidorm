@@ -11,15 +11,24 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-    <link rel="manifest" href="manifest.json">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+        as="style">
+    <link rel="preload" href="./hero.webp" as="image" type="image/webp">
+
+    <link rel="manifest" href="site.webmanifest">
 
     <!-- Primary Meta Tags -->
     <title>Serviaire - Expertos en Climatización y Aire Acondicionado en Benidorm</title>
     <meta name="title" content="Serviaire - Expertos en Climatización y Aire Acondicionado en Benidorm">
     <meta name="description"
-        content="Serviaire Benidorm: Líderes en instalación, mantenimiento y reparación de aire acondicionado y sistemas VRV. Servicio profesional en toda la Marina Alta. Técnicos autorizados, respuesta rápida y calidad garantizada.">
+        content="Serviaire Benidorm: Líderes en instalación, mantenimiento y reparación de aire acondicionado y sistemas VRV. Servicio profesional a nivel nacional. Técnicos autorizados, respuesta rápida y calidad garantizada.">
     <meta name="keywords"
-        content="aire acondicionado Benidorm, climatización Benidorm, VRV Benidorm, instalación aire acondicionado, mantenimiento climatización, reparación aire acondicionado, Daikin Benidorm, Mitsubishi Benidorm, Fujitsu Benidorm, Marina Alta, técnicos autorizados, servicio climatización">
+        content="aire acondicionado Benidorm, climatización Benidorm, VRV Benidorm, instalación aire acondicionado, mantenimiento climatización, reparación aire acondicionado, Daikin Benidorm, Mitsubishi Benidorm, Fujitsu Benidorm, nivel nacional, técnicos autorizados, servicio climatización">
     <meta name="author" content="Serviaire Benidorm">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://www.serviairebenidorm.es/">
@@ -31,7 +40,7 @@
     <meta property="og:site_name" content="Serviaire Benidorm">
     <meta property="og:title" content="Serviaire - Expertos en Climatización y Aire Acondicionado en Benidorm">
     <meta property="og:description"
-        content="Líderes en instalación, mantenimiento y reparación de aire acondicionado y sistemas VRV. Servicio profesional en toda la Marina Alta.">
+        content="Líderes en instalación, mantenimiento y reparación de aire acondicionado y sistemas VRV. Servicio profesional a nivel nacional.">
     <meta property="og:image" content="https://www.serviairebenidorm.es/hero.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -48,7 +57,9 @@
     <!-- Favicons -->
 
     <link rel="icon" type="image/svg+xml" href="logo.svg">
-    <link rel="apple-touch-icon" href="logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <!-- Preconnect & Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,7 +115,41 @@
         "ratingValue": "4.9",
         "reviewCount": "127"
       },
-      "description": "Expertos en climatización, instalación y mantenimiento de aire acondicionado en Benidorm y Marina Alta. Técnicos autorizados con más de 15 años de experiencia."
+      "description": "Expertos en climatización, instalación y mantenimiento de aire acondicionado en Benidorm y a nivel nacional. Técnicos autorizados con más de 15 años de experiencia."
+    }
+    </script>
+
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Ofrecen presupuesto gratuito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, realizamos visitas y presupuestos totalmente gratuitos y sin compromiso para evaluar sus necesidades de climatización."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué marcas de aire acondicionado instalan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trabajamos con las principales marcas del mercado como Mitsubishi Electric, Daikin, Fujitsu, Panasonic, LG y Samsung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo tardan en realizar una instalación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para una instalación doméstica estándar (tipo split), solemos tardar entre 3 y 5 horas."
+          }
+        }
+      ]
     }
     </script>
 </head>
@@ -112,7 +157,7 @@
 
 <body>
     <!-- Skip to main content for accessibility -->
-    <a href="#inicio" class="skip-to-main">Saltar al contenido principal</a>
+    <a href="#main-content" class="skip-to-main">Saltar al contenido principal</a>
 
     <!-- Header -->
     <header id="header" role="banner">
@@ -129,8 +174,13 @@
 
             <nav class="desktop-nav" aria-label="Navegación principal">
                 <a href="#inicio">Inicio</a>
+                <a href="sobre-nosotros.html">Sobre Nosotros</a>
                 <a href="#servicios">Servicios</a>
-                <a href="#proyectos">Proyectos</a>
+                <a href="proyectos.html">Proyectos</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema (claro/oscuro)">
+                    <i class="fa-solid fa-sun light-icon"></i>
+                    <i class="fa-solid fa-moon dark-icon"></i>
+                </button>
                 <a href="#contacto" class="btn btn-primary" id="open-quote-modal-nav">Pedir Presupuesto</a>
             </nav>
 
@@ -143,384 +193,751 @@
         <!-- Mobile Menu -->
         <nav id="mobile-menu" class="mobile-menu" aria-label="Menú de navegación móvil" role="navigation">
             <a href="#inicio">Inicio</a>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
             <a href="#servicios">Servicios</a>
-            <a href="#proyectos">Proyectos</a>
+            <a href="proyectos.html">Proyectos</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero" role="banner">
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="container hero-content">
-            <h1 class="fade-in-up">Expertos en <span class="highlight">Climatización</span> y Confort</h1>
-            <p class="fade-in-up delay-100">Soluciones integrales de aire acondicionado, VRV y mantenimiento para
-                hogares y empresas en Benidorm y Marina Alta.</p>
-            <div class="hero-buttons fade-in-up delay-200">
-                <a href="#contacto" class="btn btn-primary btn-lg"
-                    onclick="document.getElementById('open-quote-modal-nav').click(); return false;"
-                    aria-label="Solicitar presupuesto gratuito">Solicitar
-                    Presupuesto <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                <a href="#servicios" class="btn btn-outline btn-lg">Nuestros Servicios</a>
-            </div>
-
-            <div class="hero-stats fade-in-up delay-300" role="list">
-                <div class="stat-item" role="listitem">
-                    <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-                    <span>Técnicos Autorizados</span>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero" role="region" aria-label="Introducción">
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="container hero-content">
+                <h1 class="fade-in-up">Expertos en <span class="highlight">Climatización</span> y Confort</h1>
+                <p class="fade-in-up delay-100">Soluciones integrales de aire acondicionado, VRV y mantenimiento para
+                    hogares y empresas en Benidorm y a nivel nacional.</p>
+                <div class="hero-buttons fade-in-up delay-200">
+                    <a href="#contacto" class="btn btn-primary btn-lg"
+                        onclick="document.getElementById('open-quote-modal-nav').click(); return false;"
+                        aria-label="Solicitar presupuesto gratuito">Solicitar
+                        Presupuesto <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="#servicios" class="btn btn-outline btn-lg">Nuestros Servicios</a>
                 </div>
-                <div class="stat-item" role="listitem">
-                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
-                    <span>Respuesta Rápida</span>
-                </div>
-                <div class="stat-item" role="listitem">
-                    <i class="fa-solid fa-gem" aria-hidden="true"></i>
-                    <span>Calidad Garantizada</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Brands Section -->
-    <section class="section">
-        <div class="container text-center">
-            <h3 class="text-gray mb-4">Trabajamos con las mejores marcas</h3>
-            <div class="brands-grid">
-                <div class="brand-item">MITSUBISHI</div>
-                <div class="brand-item">DAIKIN</div>
-                <div class="brand-item">FUJITSU</div>
-                <div class="brand-item">PANASONIC</div>
-                <div class="brand-item">LG</div>
-                <div class="brand-item">SAMSUNG</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section id="valores" class="section bg-light">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>¿Por qué elegir Serviaire?</h2>
-                <div class="divider mx-auto"></div>
-                <p>Compromiso, calidad y eficiencia en cada proyecto.</p>
-            </div>
-
-            <div class="grid-4">
-                <div class="card value-card">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-handshake"></i>
+                <div class="hero-stats fade-in-up delay-300" role="list">
+                    <div class="stat-item" role="listitem">
+                        <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+                        <span>Técnicos Autorizados</span>
                     </div>
-                    <h3>Asesoramiento</h3>
-                    <p>Seguimiento integral de su proyecto desde el diseño hasta la puesta en marcha, garantizando la
-                        mejor solución.</p>
-                </div>
-                <div class="card value-card">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    <div class="stat-item" role="listitem">
+                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                        <span>Respuesta Rápida</span>
                     </div>
-                    <h3>Fiabilidad</h3>
-                    <p>Presupuestos transparentes y a su medida. Sin sorpresas, con la garantía de una empresa
-                        consolidada.</p>
-                </div>
-                <div class="card value-card">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-leaf"></i>
-                    </div>
-                    <h3>Eficiencia</h3>
-                    <p>Priorizamos el ahorro energético utilizando sistemas de vanguardia y materiales de máxima
-                        calidad.</p>
-                </div>
-                <div class="card value-card">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-user-shield"></i>
-                    </div>
-                    <h3>Garantía</h3>
-                    <p>Contamos con un equipo de técnicos autorizados y experimentados para su total tranquilidad.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="servicios" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nuestros Servicios</h2>
-                <div class="divider"></div>
-                <p>Soluciones profesionales para todo tipo de necesidades de climatización.</p>
-            </div>
-
-            <div class="grid-2">
-                <div class="service-card reveal">
-                    <div class="service-content">
-                        <div class="service-icon"><i class="fa-solid fa-building"></i></div>
-                        <h3>Volumen de Refrigerante Variable (VRV)</h3>
-                        <p>Sistemas ideales para grandes superficies como hoteles, centros comerciales y naves
-                            industriales. Permite conectar múltiples unidades interiores con regulación independiente,
-                            optimizando el confort y el consumo.</p>
-                        <ul class="service-list">
-                            <li><i class="fa-solid fa-check"></i> Alta eficiencia energética</li>
-                            <li><i class="fa-solid fa-check"></i> Control zonificado</li>
-                            <li><i class="fa-solid fa-check"></i> Ideal grandes proyectos</li>
-                        </ul>
+                    <div class="stat-item" role="listitem">
+                        <i class="fa-solid fa-gem" aria-hidden="true"></i>
+                        <span>Calidad Garantizada</span>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="service-card reveal">
-                    <div class="service-content">
-                        <div class="service-icon"><i class="fa-solid fa-snowflake"></i></div>
-                        <h3>Aire Acondicionado Doméstico y Comercial</h3>
-                        <p>Venta e instalación de las mejores marcas del mercado. Diseñamos la climatización de su hogar
-                            o negocio para asegurar el máximo confort estético y térmico.</p>
-                        <ul class="service-list">
-                            <li><i class="fa-solid fa-check"></i> Splits y conductos</li>
-                            <li><i class="fa-solid fa-check"></i> Diseño estético</li>
-                            <li><i class="fa-solid fa-check"></i> Primeras marcas</li>
-                        </ul>
+        <!-- Certifications & Trust Section (New) -->
+        <section class="py-4"
+            style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0; padding-top: 1.5rem; padding-bottom: 1.5rem;">
+            <div class="container">
+                <div
+                    style="display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap; opacity: 0.9;">
+                    <div style="display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="fa-solid fa-certificate text-primary" style="font-size: 1.5rem;"></i>
+                        <span style="font-weight: 600; color: #475569; font-size: 0.95rem;">Empresa RITE
+                            Autorizada</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="fa-solid fa-leaf text-primary" style="font-size: 1.5rem;"></i>
+                        <span style="font-weight: 600; color: #475569; font-size: 0.95rem;">Manipulador Gases
+                            Fluorados</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="fa-solid fa-shield-halved text-primary" style="font-size: 1.5rem;"></i>
+                        <span style="font-weight: 600; color: #475569; font-size: 0.95rem;">Garantía por Escrito</span>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="service-card reveal">
-                    <div class="service-content">
-                        <div class="service-icon"><i class="fa-solid fa-tools"></i></div>
-                        <h3>Mantenimiento y Reparación</h3>
-                        <p>Servicio técnico rápido y eficaz. Sabemos que una avería no puede esperar, por eso
-                            priorizamos la rapidez en la asistencia. Mantenimiento preventivo para alargar la vida de
+        <!-- Why Choose Us Section -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>¿Por qué elegir Serviaire?</h2>
+                    <div class="divider"></div>
+                    <p>Nuestra diferencia radica en la calidad técnica y el trato profesional certificado.</p>
+                </div>
+                <div class="grid-4">
+                    <div class="reveal text-center">
+                        <div
+                            style="width: 70px; height: 70px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                            <i class="fa-solid fa-user-check text-primary" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <h4 class="mb-2">Técnicos Propios</h4>
+                        <p class="text-sm">No subcontratamos. Todos nuestros técnicos están en plantilla y certificados
+                            bajo
+                            normativa RITE.</p>
+                    </div>
+                    <div class="reveal delay-100 text-center">
+                        <div
+                            style="width: 70px; height: 70px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                            <i class="fa-solid fa-gauge-high text-primary" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <h4 class="mb-2">Atención en 24h</h4>
+                        <p class="text-sm">Emergencias y averías atendidas en menos de 24 horas en Benidorm y
+                            alrededores.
+                        </p>
+                    </div>
+                    <div class="reveal delay-200 text-center">
+                        <div
+                            style="width: 70px; height: 70px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                            <i class="fa-solid fa-box-open text-primary" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <h4 class="mb-2">Recambios Originales</h4>
+                        <p class="text-sm">Solo utilizamos repuestos originales de fábrica para asegurar la durabilidad
+                            de
                             sus equipos.</p>
-                        <ul class="service-list">
-                            <li><i class="fa-solid fa-check"></i> Reparación multimarca</li>
-                            <li><i class="fa-solid fa-check"></i> Mantenimiento preventivo</li>
-                            <li><i class="fa-solid fa-check"></i> Respuesta rápida</li>
-                        </ul>
+                    </div>
+                    <div class="reveal delay-300 text-center">
+                        <div
+                            style="width: 70px; height: 70px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                            <i class="fa-solid fa-piggy-bank text-primary" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <h4 class="mb-2">Financiación 0%</h4>
+                        <p class="text-sm">Ofrecemos opciones de financiación a medida para que el confort no sea un
+                            problema económico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands Section -->
+        <section class="section">
+            <div class="container text-center">
+                <div
+                    style="background: white; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 class="text-gray mb-5"
+                        style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.6;">
+                        Instalación
+                        y Servicio Oficial</h3>
+                    <div class="brands-grid"
+                        style="display: flex; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap; opacity: 0.8; filter: grayscale(1);">
+                        <div class="brand-item" style="font-weight: 800; color: #1e293b; font-size: 1.15rem;">MITSUBISHI
+                            ELECTRIC</div>
+                        <div class="brand-item" style="font-weight: 800; color: #1e293b; font-size: 1.15rem;">DAIKIN
+                        </div>
+                        <div class="brand-item" style="font-weight: 800; color: #1e293b; font-size: 1.15rem;">FUJITSU
+                        </div>
+                        <div class="brand-item" style="font-weight: 800; color: #1e293b; font-size: 1.15rem;">PANASONIC
+                        </div>
+                        <div class="brand-item" style="font-weight: 800; color: #1e293b; font-size: 1.15rem;">TOSHIBA
+                        </div>
+                        <div class="brand-item" style="font-weight: 800; color: #1e293b; font-size: 1.15rem;">LG</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hotel & Commercial Prestige Section -->
+        <section class="section" style="background: #f8fafc;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Confianza en el Sector Hotelero</h2>
+                    <div class="divider mx-auto"></div>
+                    <p>Somos el partner técnico de confianza de los principales complejos turísticos de la Costa Blanca.
+                    </p>
+                </div>
+
+                <style>
+                    .hotel-logos-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                        gap: 3rem;
+                        align-items: center;
+                        margin-top: 4rem;
+                    }
+
+                    .hotel-logo-wrapper {
+                        position: relative;
+                        filter: grayscale(1);
+                        opacity: 0.5;
+                        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .hotel-logo-wrapper:hover {
+                        filter: grayscale(0);
+                        opacity: 1;
+                        transform: translateY(-5px);
+                    }
+
+                    .hotel-logo-wrapper img {
+                        width: 100%;
+                        height: auto;
+                        max-height: 50px;
+                        object-fit: contain;
+                    }
+
+                    .hotel-logo-wrapper::after {
+                        content: attr(data-hotel);
+                        position: absolute;
+                        bottom: -25px;
+                        font-size: 0.7rem;
+                        font-weight: 700;
+                        color: var(--primary);
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        white-space: nowrap;
+                    }
+
+                    .hotel-logo-wrapper:hover::after {
+                        opacity: 1;
+                    }
+                </style>
+
+                <div class="hotel-logos-grid reveal">
+                    <div class="hotel-logo-wrapper" data-hotel="Mercure Benidorm">
+                        <img src="./hotel_mercure_benidorm_vrv.webp" alt="Hotel Mercure" loading="lazy">
+                    </div>
+                    <div class="hotel-logo-wrapper" data-hotel="Suitopia Calpe">
+                        <img src="./hotel_suitopia_calpe_vrv.webp" alt="Suitopia Calpe" loading="lazy">
+                    </div>
+                    <div class="hotel-logo-wrapper" data-hotel="Grand Luxor / Terra Mítica">
+                        <img src="./hotel_terra_mitica_vrv.webp" alt="Hotel Terra Mitica" loading="lazy">
+                    </div>
+                    <div class="hotel-logo-wrapper" data-hotel="Hotel Montesol">
+                        <img src="./hotel_montesol.webp" alt="Hotel Montesol" loading="lazy">
+                    </div>
+                    <div class="hotel-logo-wrapper" data-hotel="Hotel Nadal">
+                        <img src="./hotel_nadal.webp" alt="Hotel Nadal" loading="lazy">
+                    </div>
+                    <div class="hotel-logo-wrapper" data-hotel="Zem Wellness">
+                        <img src="./hotel_zem.webp" alt="Hotel Zem Wellness" loading="lazy">
                     </div>
                 </div>
 
-                <div class="service-card reveal special-card">
-                    <div class="service-bg"></div>
-                    <div class="service-content">
-                        <h3>¿Necesita una solución a medida?</h3>
-                        <p>Realizamos estudios personalizados para optimizar la climatización de su espacio.</p>
-                        <a href="#contacto" class="btn btn-white btn-lg mt-4">Contactar Ahora</a>
+                <div class="text-center mt-5">
+                    <p class="mb-4" style="max-width: 800px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">
+                        Nuestra capacidad técnica para gestionar mantenimientos RITE y grandes instalaciones VRV nos
+                        convierte en líderes del sector profesional.</p>
+                    <a href="proyectos.html" class="btn btn-outline">Ver Historial de Proyectos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nuestros Servicios</h2>
+                    <div class="divider"></div>
+                    <p>Soluciones profesionales para todo tipo de necesidades de climatización.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="service-card reveal">
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                            <h3>Volumen de Refrigerante Variable (VRV)</h3>
+                            <p>Sistemas ideales para grandes superficies como hoteles, centros comerciales y naves
+                                industriales. Permite conectar múltiples unidades interiores con regulación
+                                independiente,
+                                optimizando el confort y el consumo.</p>
+                            <ul class="service-list">
+                                <li><i class="fa-solid fa-check"></i> Alta eficiencia energética</li>
+                                <li><i class="fa-solid fa-check"></i> Control zonificado</li>
+                                <li><i class="fa-solid fa-check"></i> Ideal grandes proyectos</li>
+                            </ul>
+                            <a href="sistemas-vrv-hoteles-benidorm.html" class="btn btn-outline btn-sm mt-3"
+                                style="width: auto;">Más información</a>
+                        </div>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fa-solid fa-snowflake"></i></div>
+                            <h3>Aire Acondicionado Doméstico y Comercial</h3>
+                            <p>Venta e instalación de las mejores marcas del mercado. Diseñamos la climatización de su
+                                hogar
+                                o negocio para asegurar el máximo confort estético y térmico.</p>
+                            <ul class="service-list">
+                                <li><i class="fa-solid fa-check"></i> Splits y conductos</li>
+                                <li><i class="fa-solid fa-check"></i> Diseño estético</li>
+                                <li><i class="fa-solid fa-check"></i> Primeras marcas</li>
+                            </ul>
+                            <a href="instalacion-aire-acondicionado.html" class="btn btn-outline btn-sm mt-3"
+                                style="width: auto;">Más información</a>
+                        </div>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-content">
+                            <div class="service-icon"><i class="fa-solid fa-tools"></i></div>
+                            <h3>Mantenimiento y Reparación</h3>
+                            <p>Servicio técnico rápido y eficaz. Sabemos que una avería no puede esperar, por eso
+                                priorizamos la rapidez en la asistencia. Mantenimiento preventivo para alargar la vida
+                                de
+                                sus equipos.</p>
+                            <ul class="service-list">
+                                <li><i class="fa-solid fa-check"></i> Reparación multimarca</li>
+                                <li><i class="fa-solid fa-check"></i> Mantenimiento preventivo</li>
+                                <li><i class="fa-solid fa-check"></i> Respuesta rápida</li>
+                            </ul>
+                            <a href="mantenimiento-aire-acondicionado-benidorm.html" class="btn btn-outline btn-sm mt-3"
+                                style="width: auto;">Más información</a>
+                        </div>
+                    </div>
+
+                    <div class="service-card reveal special-card">
+                        <div class="service-bg"></div>
+                        <div class="service-content">
+                            <h3>¿Necesita una solución a medida?</h3>
+                            <p>Realizamos estudios personalizados para optimizar la climatización de su espacio.</p>
+                            <a href="#contacto" class="btn btn-white btn-lg mt-4">Contactar Ahora</a>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="proyectos" class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Proyectos Destacados</h2>
+                    <div class="divider"></div>
+                    <p>Nuestra experiencia habla por sí misma. Aquí puede ver algunos de nuestros trabajos recientes.
+                    </p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="project-card reveal">
+                        <picture>
+                            <source srcset="./vrv_commercial_roof.webp" type="image/webp">
+                            <img src="./vrv_commercial_roof.png"
+                                alt="Técnico de Serviaire instalando sistema VRV de climatización en azotea de hotel en Benidorm"
+                                class="project-img" loading="lazy" width="400" height="250">
+                        </picture>
+                        <div class="project-info">
+                            <h3>Instalación VRV Hotel</h3>
+                            <p>Sistema centralizado de alta eficiencia para complejo hotelero en Benidorm.</p>
+                        </div>
+                    </div>
+                    <div class="project-card reveal delay-100">
+                        <picture>
+                            <source srcset="./ac_bedroom_interior.webp" type="image/webp">
+                            <img src="./ac_bedroom_interior.png"
+                                alt="Unidad interior de aire acondicionado Mitsubishi instalada en dormitorio moderno con diseño estético"
+                                class="project-img" loading="lazy" width="400" height="250">
+                        </picture>
+                        <div class="project-info">
+                            <h3>Climatización Residencial</h3>
+                            <p>Instalación estética y silenciosa para vivienda moderna.</p>
+                        </div>
+                    </div>
+                    <div class="project-card reveal delay-200">
+                        <picture>
+                            <source srcset="./technician_maintenance_close.webp" type="image/webp">
+                            <img src="./technician_maintenance_close.png"
+                                alt="Técnico autorizado de Serviaire realizando mantenimiento preventivo y calibración de aire acondicionado"
+                                class="project-img" loading="lazy" width="400" height="250">
+                        </picture>
+
+                        <div class="project-info">
+                            <h3>Mantenimiento Preventivo</h3>
+                            <p>Revisión técnica y calibración para asegurar el máximo rendimiento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 reveal delay-300">
+                    <a href="proyectos.html" class="btn btn-primary" style="margin-top: 2rem;">Ver Todos los
+                        Proyectos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <!-- Testimonials Section - Google Style -->
+        <section class="section" style="background: white;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Opiniones de nuestros Clientes</h2>
+                    <div class="divider mx-auto"></div>
+                    <div
+                        style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 1rem;">
+                        <span style="font-weight: 800; font-size: 1.5rem;">4.9</span>
+                        <div style="color: #fbbc04;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span style="color: var(--gray); font-size: 0.9rem;">(Basado en +120 reseñas)</span>
+                    </div>
+                </div>
+
+                <div class="grid-3" style="margin-top: 3rem;">
+                    <div class="testimonial-card"
+                        style="padding: 2rem; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); background: #fdfdfd;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div
+                                style="width: 45px; height: 45px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #64748b;">
+                                C</div>
+                            <div>
+                                <div style="font-weight: 700; color: var(--secondary);">Carlos M.</div>
+                                <div style="color: #fbbc04; font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png"
+                                alt="Google" style="width: 18px; margin-left: auto; opacity: 0.5;">
+                        </div>
+                        <p style="font-size: 0.95rem; line-height: 1.6; color: #475569; font-style: italic;">"Excelente
+                            servicio. Instalaron el aire acondicionado en mi casa en tiempo récord y dejaron todo
+                            impecable.
+                            Muy recomendables."</p>
+                    </div>
+
+                    <div class="testimonial-card"
+                        style="padding: 2rem; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); background: #fdfdfd;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div
+                                style="width: 45px; height: 45px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #64748b;">
+                                L</div>
+                            <div>
+                                <div style="font-weight: 700; color: var(--secondary);">Laura G.</div>
+                                <div style="color: #fbbc04; font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png"
+                                alt="Google" style="width: 18px; margin-left: auto; opacity: 0.5;">
+                        </div>
+                        <p style="font-size: 0.95rem; line-height: 1.6; color: #475569; font-style: italic;">"Llevan el
+                            mantenimiento de nuestra empresa desde hace años. Respuesta rápida ante cualquier avería.
+                            Son
+                            profesionales de confianza."</p>
+                    </div>
+
+                    <div class="testimonial-card"
+                        style="padding: 2rem; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); background: #fdfdfd;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div
+                                style="width: 45px; height: 45px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #64748b;">
+                                A</div>
+                            <div>
+                                <div style="font-weight: 700; color: var(--secondary);">Antonio R.</div>
+                                <div style="color: #fbbc04; font-size: 0.8rem;">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png"
+                                alt="Google" style="width: 18px; margin-left: auto; opacity: 0.5;">
+                        </div>
+                        <p style="font-size: 0.95rem; line-height: 1.6; color: #475569; font-style: italic;">"Me
+                            asesoraron
+                            muy bien sobre qué máquina poner para ahorrar luz. Estoy encantada con el resultado y el
+                            trato
+                            recibido."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog / Content Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Consejos de Climatización</h2>
+                    <div class="divider mx-auto"></div>
+                    <p>Nuestros expertos comparten consejos para optimizar su confort y ahorro energético.</p>
+                </div>
+
+                <div class="grid-3" style="margin-top: 3rem;">
+                    <article class="card reveal"
+                        style="padding: 0; display: flex; flex-direction: column; cursor: pointer;"
+                        onclick="window.location.href='ahorra-30-aire-acondicionado.html'">
+                        <img src="./hero.webp" alt="Ahorro energético aire acondicionado"
+                            style="width: 100%; height: 200px; object-fit: cover; transition: transform 0.5s ease;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
+                            <span
+                                style="font-size: 0.8rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 0.5rem; display: block;">Ahorro
+                                Energético</span>
+                            <h3 style="font-size: 1.25rem;">Cómo reducir tu factura un 30%</h3>
+                            <p style="font-size: 0.95rem; margin-top: 0.5rem;">Descubre los mejores hábitos y
+                                configuraciones para tu equipo de aire acondicionado.</p>
+                            <a href="ahorra-30-aire-acondicionado.html" class="text-primary"
+                                style="margin-top: auto; font-weight: 600; text-decoration: none; font-size: 0.95rem;">Leer
+                                más <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="card reveal delay-100"
+                        style="padding: 0; display: flex; flex-direction: column; cursor: pointer;"
+                        onclick="window.location.href='mantenimiento-filtros-guia.html'">
+                        <img src="./technician_maintenance_close.webp" alt="Mantenimiento filtros aire acondicionado"
+                            style="width: 100%; height: 200px; object-fit: cover; transition: transform 0.5s ease;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
+                            <span
+                                style="font-size: 0.8rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 0.5rem; display: block;">Mantenimiento</span>
+                            <h3 style="font-size: 1.25rem;">¿Cuándo limpiar los filtros?</h3>
+                            <p style="font-size: 0.95rem; margin-top: 0.5rem;">La limpieza de filtros no solo mejora el
+                                aire, también previene averías costosas.</p>
+                            <a href="mantenimiento-filtros-guia.html" class="text-primary"
+                                style="margin-top: auto; font-weight: 600; text-decoration: none; font-size: 0.95rem;">Leer
+                                más <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="card reveal delay-200"
+                        style="padding: 0; display: flex; flex-direction: column; cursor: pointer;"
+                        onclick="window.location.href='beneficios-vrv-hoteles.html'">
+                        <img src="./vrv_commercial_roof.webp" alt="Beneficios VRV industrial"
+                            style="width: 100%; height: 200px; object-fit: cover; transition: transform 0.5s ease;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
+                            <span
+                                style="font-size: 0.8rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 0.5rem; display: block;">Empresas</span>
+                            <h3 style="font-size: 1.25rem;">Ventajas del sistema VRV</h3>
+                            <p style="font-size: 0.95rem; margin-top: 0.5rem;">Por qué los hoteles y naves eligen el
+                                volumen
+                                de refrigerante variable para su climatización.</p>
+                            <a href="beneficios-vrv-hoteles.html" class="text-primary"
+                                style="margin-top: auto; font-weight: 600; text-decoration: none; font-size: 0.95rem;">Leer
+                                más <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Preguntas Frecuentes</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            ¿Ofrecen presupuesto gratuito?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí, realizamos visitas y presupuestos totalmente gratuitos y sin compromiso para evaluar
+                                sus
+                                necesidades de climatización.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            ¿Qué marcas de aire acondicionado instalan?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Trabajamos con las principales marcas del mercado como Mitsubishi Electric, Daikin,
+                                Fujitsu,
+                                Panasonic, LG y Samsung, garantizando siempre la mejor calidad y servicio post-venta.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            ¿Cuánto tiempo tardan en realizar una instalación?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Para una instalación doméstica estándar (tipo split), solemos tardar entre 3 y 5 horas.
+                                Para
+                                proyectos más grandes o sistemas por conductos, evaluamos el tiempo en el presupuesto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container text-center">
+                <h2>Listo para mejorar su climatización?</h2>
+                <p>Pida su presupuesto sin compromiso hoy mismo.</p>
+                <a href="tel:663036070" class="btn btn-primary btn-lg"><i class="fa-solid fa-phone"></i> Llamar al 663
+                    036
+                    070</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="section">
+            <div class="container">
+                <div class="grid-contact">
+                    <div class="contact-info">
+                        <div class="section-header">
+                            <h2>Contacto</h2>
+                            <div class="divider"></div>
+                            <p>Estamos aquí para ayudarle. Visítenos o envíenos un mensaje.</p>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Avd. Alfonso Puchades, 9, Local 7<br>03501 Benidorm (Alicante)</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p><a href="tel:663036070">663 036 070</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:serviaireventas@telefonica.net">serviaireventas@telefonica.net</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="map-placeholder" id="map-consent-container"
+                            style="background: #f1f5f9; position: relative; height: 250px; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+                            <div id="map-consent-content">
+                                <i class="fa-solid fa-map-location-dot"
+                                    style="font-size: 2.5rem; color: #cbd5e1; margin-bottom: 1rem;"></i>
+                                <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1.5rem;">Cargue el mapa
+                                    interactivo aceptando las cookies de marketing.</p>
+                                <button class="btn btn-sm btn-outline" id="load-map-btn"
+                                    style="color: var(--dark); border-color: #cbd5e1;">Aceptar y Cargar Mapa</button>
+                            </div>
+                            <iframe id="google-map"
+                                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3122.656799052069!2d-0.1345474!3d38.5414848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6205739812674f%3A0xe677569921470404!2sAv.%20Alfonso%20Puchades%2C%209%2C%2003501%20Benidorm%2C%20Alicante!5e0!3m2!1sen!2ses!4v1709220000000!5m2!1sen!2ses"
+                                width="100%" height="250" style="border:0; display: none;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                title="Ubicación de Serviaire Benidorm en Google Maps"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <h3>Envíenos un mensaje</h3>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" name="name" placeholder="Su nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="su@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Su teléfono" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" rows="5" placeholder="¿En qué podemos ayudarle?"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floating Trust Badge -->
+        <div class="trust-badge"
+            style="position: fixed; bottom: 100px; right: 20px; z-index: 99; background: white; padding: 10px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px; border: 1px solid #eee; transition: all 0.3s ease;">
+            <div
+                style="background: var(--primary); width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                <i class="fa-solid fa-award"></i>
+            </div>
+            <div style="padding-right: 10px;">
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--secondary); line-height: 1;">+17 AÑOS
+                </div>
+                <div style="font-size: 0.65rem; color: var(--gray); font-weight: 500;">EXP. CERTIFICADA</div>
             </div>
         </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="proyectos" class="section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Proyectos Recientes</h2>
-                <div class="divider"></div>
-                <p>Nuestra experiencia habla por sí misma. Echa un vistazo a nuestros últimos trabajos.</p>
-            </div>
+        <!-- Floating WhatsApp -->
+        <a href="https://wa.me/34663036070" target="_blank" class="float-whatsapp" aria-label="Chat en WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
 
-            <div class="grid-3">
-                <div class="project-card reveal">
-                    <img src="./vrv_commercial_roof.png"
-                        alt="Técnico de Serviaire instalando sistema VRV de climatización en azotea de hotel en Benidorm"
-                        class="project-img" loading="lazy" width="400" height="250">
-                    <div class="project-info">
-                        <h3>Instalación VRV Hotel</h3>
-                        <p>Sistema centralizado de alta eficiencia para complejo hotelero en Benidorm.</p>
-                    </div>
-                </div>
-                <div class="project-card reveal delay-100">
-                    <img src="./ac_bedroom_interior.png"
-                        alt="Unidad interior de aire acondicionado Mitsubishi instalada en dormitorio moderno con diseño estético"
-                        class="project-img" loading="lazy" width="400" height="250">
-                    <div class="project-info">
-                        <h3>Climatización Residencial</h3>
-                        <p>Instalación estética y silenciosa para vivienda moderna.</p>
-                    </div>
-                </div>
-                <div class="project-card reveal delay-200">
-                    <img src="./technician_maintenance_close.png"
-                        alt="Técnico autorizado de Serviaire realizando mantenimiento preventivo y calibración de aire acondicionado"
-                        class="project-img" loading="lazy" width="400" height="250">
-
-                    <div class="project-info">
-                        <h3>Mantenimiento Preventivo</h3>
-                        <p>Revisión técnica y calibración para asegurar el máximo rendimiento.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Lo que dicen nuestros clientes</h2>
-                <div class="divider mx-auto"></div>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Excelente servicio. Instalaron el aire acondicionado en mi casa en tiempo récord y dejaron todo
-                        impecable. Muy recomendables."</p>
-                    <div class="author">- Carlos M., Benidorm</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Llevan el mantenimiento de nuestra empresa desde hace años. Respuesta rápida ante cualquier
-                        avería. Son profesionales de confianza."</p>
-                    <div class="author">- Laura G., Gerente Hotel</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Me asesoraron muy bien sobre qué máquina poner para ahorrar luz. Estoy encantada con el
-                        resultado y el trato recibido."</p>
-                    <div class="author">- Antonio R., Finestrat</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Preguntas Frecuentes</h2>
-                <div class="divider"></div>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Ofrecen presupuesto gratuito?
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sí, realizamos visitas y presupuestos totalmente gratuitos y sin compromiso para evaluar sus
-                            necesidades de climatización.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Qué marcas de aire acondicionado instalan?
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Trabajamos con las principales marcas del mercado como Mitsubishi Electric, Daikin, Fujitsu,
-                            Panasonic, LG y Samsung, garantizando siempre la mejor calidad y servicio post-venta.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        ¿Cuánto tiempo tardan en realizar una instalación?
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Para una instalación doméstica estándar (tipo split), solemos tardar entre 3 y 5 horas. Para
-                            proyectos más grandes o sistemas por conductos, evaluamos el tiempo en el presupuesto.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container text-center">
-            <h2>Listo para mejorar su climatización?</h2>
-            <p>Pida su presupuesto sin compromiso hoy mismo.</p>
-            <a href="tel:663036070" class="btn btn-primary btn-lg"><i class="fa-solid fa-phone"></i> Llamar al 663 036
-                070</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contacto" class="section">
-        <div class="container">
-            <div class="grid-contact">
-                <div class="contact-info">
-                    <div class="section-header">
-                        <h2>Contacto</h2>
-                        <div class="divider"></div>
-                        <p>Estamos aquí para ayudarle. Visítenos o envíenos un mensaje.</p>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <div>
-                            <h4>Dirección</h4>
-                            <p>Avd. Alfonso Puchades, 9, Local 7<br>03501 Benidorm (Alicante)</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="icon"><i class="fa-solid fa-phone"></i></div>
-                        <div>
-                            <h4>Teléfono</h4>
-                            <p><a href="tel:663036070">663 036 070</a></p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
-                        <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:serviaireventas@telefonica.net">serviaireventas@telefonica.net</a></p>
-                        </div>
-                    </div>
-
-                    <div class="map-placeholder">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3122.656799052069!2d-0.1345474!3d38.5414848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6205739812674f%3A0xe677569921470404!2sAv.%20Alfonso%20Puchades%2C%209%2C%2003501%20Benidorm%2C%20Alicante!5e0!3m2!1sen!2ses!4v1709220000000!5m2!1sen!2ses"
-                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <h3>Envíenos un mensaje</h3>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" placeholder="Su nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="su@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Su teléfono" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" placeholder="¿En qué podemos ayudarle?"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/34663036070" target="_blank" class="float-whatsapp" aria-label="Chat en WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
+    </main>
     <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <div class="logo-text text-white">
-                    SERVIAIRE
-                    <span class="logo-sub text-primary">CLIMATIZACIÓN</span>
+    <footer style="background: #0f172a; color: white; padding: 4rem 0 2rem;">
+        <div class="container">
+            <div class="grid-4 mb-5">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="logo-text text-white mb-3" style="font-size: 1.5rem;">
+                        SERVIAIRE
+                        <span class="logo-sub text-primary">CLIMATIZACIÓN</span>
+                    </div>
+                    <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6;">Líderes en climatización
+                        profesional en Benidorm y a nivel nacional desde 2008. Empresa RITE autorizada.</p>
                 </div>
-                <p>&copy; 2026 Serviaire Benidorm. Todos los derechos reservados.</p>
+                <!-- Service Area (Local SEO) -->
+                <div>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--white);">Zona de Servicio</h4>
+                    <ul class="fa-ul" style="color: #94a3b8; font-size: 0.95rem; margin-left: 1.5rem;">
+                        <li class="mb-2"><span class="fa-li"><i
+                                    class="fa-solid fa-location-dot text-primary"></i></span>Benidorm (Sede)</li>
+                        <li class="mb-2"><span class="fa-li"><i
+                                    class="fa-solid fa-location-dot text-primary"></i></span>Finestrat / Altea</li>
+                        <li class="mb-2"><span class="fa-li"><i
+                                    class="fa-solid fa-location-dot text-primary"></i></span>Villajoyosa / La Nucía</li>
+                        <li class="mb-2"><span class="fa-li"><i
+                                    class="fa-solid fa-location-dot text-primary"></i></span>Marina Alta / Calpe</li>
+                    </ul>
+                </div>
+                <!-- Quick Contact -->
+                <div>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--white);">Contacto</h4>
+                    <p class="mb-2" style="color: #94a3b8;">Avd. Alfonso Puchades, 9<br>03501 Benidorm</p>
+                    <p class="mb-2"><a href="tel:663036070" style="color: var(--white); font-weight: 600;">663 036
+                            070</a></p>
+                    <p><a href="#" class="obf-email" style="color: #94a3b8;">Email de contacto</a></p>
+                </div>
+                <!-- Services -->
+                <div>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--white);">Servicios</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="mb-2"><a href="instalacion-aire-acondicionado.html"
+                                style="color: #94a3b8; transition: color 0.3s;">Instalación Aire</a></li>
+                        <li class="mb-2"><a href="mantenimiento-aire-acondicionado-benidorm.html"
+                                style="color: #94a3b8; transition: color 0.3s;">Mantenimiento SAT</a></li>
+                        <li class="mb-2"><a href="sistemas-vrv-hoteles-benidorm.html"
+                                style="color: #94a3b8; transition: color 0.3s;">Sistemas VRV</a></li>
+                        <li class="mb-2"><a href="proyectos.html"
+                                style="color: #94a3b8; transition: color 0.3s;">Proyectos</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="aviso-legal.html">Aviso Legal</a>
-                <a href="politica-privacidad.html">Política de Privacidad</a>
-                <a href="politica-cookies.html">Cookies</a>
+
+            <div
+                style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <p style="color: #64748b; font-size: 0.875rem;">&copy; 2026 Serviaire Benidorm. Instaladores autorizados
+                    RITE.</p>
+                <div style="display: flex; gap: 1.5rem; font-size: 0.875rem;">
+                    <a href="aviso-legal.html" style="color: #64748b; transition: color 0.3s;">Aviso Legal</a>
+                    <a href="politica-privacidad.html" style="color: #64748b; transition: color 0.3s;">Privacidad</a>
+                    <a href="politica-cookies.html" style="color: #64748b; transition: color 0.3s;">Cookies</a>
+                </div>
             </div>
         </div>
     </footer>
