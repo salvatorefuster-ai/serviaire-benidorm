@@ -319,6 +319,24 @@ header {
     background: transparent;
 }
 
+/* Scroll Progress Bar */
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    z-index: 1001;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    background: var(--primary-gradient);
+    width: 0%;
+}
+
+
 header.scrolled {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(20px) saturate(180%);
@@ -1754,12 +1772,32 @@ textarea.error+.form-error-message {
     background-color: #128c7e;
 }
 
-/* Trust Badge Sticky Polish */
-.trust-badge:hover {
-    transform: translateX(-5px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
-    background: #fdfdfd !important;
+/* Brands Section Polish */
+.brands-grid {
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
 }
+
+.brands-grid:hover {
+    opacity: 0.9;
+    filter: grayscale(0%);
+}
+
+.brand-item {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #334155;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.brand-item:hover {
+    transform: scale(1.1);
+    color: var(--primary);
+}
+
 
 
 /* Enhanced Reveal Animation */

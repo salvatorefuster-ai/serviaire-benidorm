@@ -27,10 +27,9 @@
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="logo.svg">
-    <link rel="apple-touch-icon" href="logo.svg">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -95,11 +94,20 @@
     <section class="page-hero"
         style="background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('./vrv_commercial_roof.webp') no-repeat center center/cover;">
         <div class="container">
-            <nav class="breadcrumbs"
-                style="margin-bottom: 2rem; display: flex; justify-content: center; gap: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
-                <a href="index.html" style="color: white; text-decoration: none;">Inicio</a>
+            <nav class="breadcrumbs" aria-label="Migas de pan"
+                style="margin-bottom: 2rem; display: flex; justify-content: center; gap: 0.5rem; font-size: 0.9rem; opacity: 0.8;"
+                itemscope itemtype="https://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="index.html" itemprop="item" style="color: white; text-decoration: none;">
+                        <span itemprop="name">Inicio</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </span>
                 <span style="color: rgba(255,255,255,0.5);">/</span>
-                <span style="color: var(--primary-light);">Consejos</span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name" style="color: var(--primary-light);">Consejos</span>
+                    <meta itemprop="position" content="2" />
+                </span>
             </nav>
             <h1 class="fade-in-up">Sistema VRV: El rey de la hotelería</h1>
             <p class="fade-in-up delay-100" style="max-width: 700px; margin: 0 auto; opacity: 0.9;">
@@ -164,6 +172,26 @@
                         <a href="proyectos.html" class="btn btn-primary btn-block">Casos de Éxito</a>
                     </div>
                 </aside>
+            </div>
+
+            <!-- Share Section -->
+            <div class="reveal"
+                style="margin-top: 5rem; padding-top: 3rem; border-top: 1px solid #e2e8f0; text-align: center;">
+                <h4 style="margin-bottom: 1.5rem; color: var(--secondary);">¿Te ha parecido interesante?</h4>
+                <div style="display: flex; justify-content: center; gap: 1rem;">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.serviairebenidorm.es/beneficios-vrv-hoteles.html"
+                        target="_blank" class="btn btn-outline btn-sm" style="padding: 0.5rem 1rem;">
+                        <i class="fa-brands fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://www.serviairebenidorm.es/beneficios-vrv-hoteles.html"
+                        target="_blank" class="btn btn-outline btn-sm" style="padding: 0.5rem 1rem;">
+                        <i class="fa-brands fa-twitter"></i> Twitter
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Interesante artículo sobre VRV en hoteles: https://www.serviairebenidorm.es/beneficios-vrv-hoteles.html"
+                        target="_blank" class="btn btn-outline btn-sm" style="padding: 0.5rem 1rem;">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </main>

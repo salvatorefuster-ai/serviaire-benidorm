@@ -1,4 +1,4 @@
-const CACHE_NAME = 'serviaire-v1';
+const CACHE_NAME = 'serviaire-v2';
 const ASSETS = [
     '/',
     '/index.html',
@@ -16,6 +16,9 @@ const ASSETS = [
     '/style.css',
     '/script.js',
     '/logo.svg',
+    '/favicon-32x32.png',
+    '/favicon-16x16.png',
+    '/apple-touch-icon.png',
     '/site.webmanifest',
     '/hero.webp',
     '/vrv_commercial_roof.webp',
@@ -29,6 +32,20 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then((cache) => cache.addAll(ASSETS))
+    );
+});
+
+self.addEventListener('activate', (event) => {
+    event.waitUntil(
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.map((cacheName) => {
+                    if (cacheName !== CACHE_NAME) {
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
     );
 });
 

@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Scroll Logic: Header & Progress Bar & Back to Top
     const header = document.getElementById('header');
-    const scrollProgress = document.createElement('div');
-    scrollProgress.className = 'scroll-progress';
-    document.body.appendChild(scrollProgress);
+    const scrollContainer = document.createElement('div');
+    scrollContainer.className = 'scroll-progress-container';
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress-bar';
+    scrollContainer.appendChild(progressBar);
+    document.body.appendChild(scrollContainer);
 
     const backToTop = document.createElement('div');
     backToTop.className = 'back-to-top';
@@ -23,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (winScroll / height) * 100;
-        scrollProgress.style.width = scrolled + "%";
+        if (progressBar) progressBar.style.width = scrolled + "%";
 
         // Back to top visibility
         if (window.scrollY > 500) {
@@ -452,10 +455,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const loadMap = () => {
         if (googleMap && googleMap.dataset.src) {
+            if (mapConsentContent) {
+                mapConsentContent.innerHTML = '<div class="spinner" style="margin: 0 auto 1rem;"></div><p>Cargando mapa interactivo...</p>';
+            }
             googleMap.src = googleMap.dataset.src;
-            googleMap.style.display = 'block';
-            if (mapConsentContent) mapConsentContent.style.display = 'none';
-            if (mapConsentContainer) mapConsentContainer.style.padding = '0';
+            googleMap.onload = () => {
+                googleMap.style.display = 'block';
+                if (mapConsentContent) mapConsentContent.style.display = 'none';
+                if (mapConsentContainer) mapConsentContainer.style.padding = '0';
+            };
         }
     };
 

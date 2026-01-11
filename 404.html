@@ -5,15 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página no encontrada | Serviaire Benidorm</title>
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src 'none'; connect-src 'self';">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
     <link rel="stylesheet" href="style.css?v=2.2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body style="display: flex; flex-direction: column; min-height: 100vh; background: #f8fafc;">
-    <header id="header">
+    <header id="header" class="scrolled">
         <div class="container header-content">
-            <a href="index.html" class="logo">SERVIAIRE</a>
-            <nav class="desktop-nav"><a href="index.html">Volver a inicio</a></nav>
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><img src="./logo.svg" alt="Serviaire Logo"
+                        style="width: 100%; height: 100%; object-fit: contain;"></span>
+                <div class="logo-text">SERVIAIRE<span class="logo-sub">CLIMATIZACIÓN</span></div>
+            </a>
+            <nav class="desktop-nav"><a href="index.html" class="btn btn-outline btn-sm">Volver a inicio</a></nav>
         </div>
     </header>
 
@@ -28,15 +43,15 @@
             <a href="index.html" class="btn btn-primary btn-lg">Ir a Inicio</a>
 
             <div style="margin-top: 4rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
-                <a href="instalacion-aire-acondicionado.html" class="card p-3"
-                    style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
-                    <i class="fa-solid fa-wind text-primary"></i>
-                    <span style="font-size: 0.9rem; font-weight: 600; color: var(--secondary);">Instalación</span>
+                <a href="instalacion-aire-acondicionado.html" class="card p-4 reveal"
+                    style="text-decoration: none; display: flex; align-items: center; gap: 15px; border: 1px solid #f1f5f9; transition: all 0.3s ease;">
+                    <i class="fa-solid fa-wind text-primary" style="font-size: 1.5rem;"></i>
+                    <span style="font-size: 1rem; font-weight: 600; color: var(--secondary);">Instalación</span>
                 </a>
-                <a href="mantenimiento-aire-acondicionado-benidorm.html" class="card p-3"
-                    style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
-                    <i class="fa-solid fa-tools text-primary"></i>
-                    <span style="font-size: 0.9rem; font-weight: 600; color: var(--secondary);">Mantenimiento</span>
+                <a href="mantenimiento-aire-acondicionado-benidorm.html" class="card p-4 reveal"
+                    style="text-decoration: none; display: flex; align-items: center; gap: 15px; border: 1px solid #f1f5f9; transition: all 0.3s ease;">
+                    <i class="fa-solid fa-tools text-primary" style="font-size: 1.5rem;"></i>
+                    <span style="font-size: 1rem; font-weight: 600; color: var(--secondary);">Mantenimiento</span>
                 </a>
             </div>
         </div>
