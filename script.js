@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Dynamic Date & Experience Logic
+    const currentYear = new Date().getFullYear();
+    const foundationYear = 2008;
+    const yearsOfExp = currentYear - foundationYear;
+
+    document.querySelectorAll('.current-year').forEach(el => el.textContent = currentYear);
+    document.querySelectorAll('.years-exp').forEach(el => {
+        const target = yearsOfExp;
+        let count = 0;
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 16); // 60fps
+
+        const updateCount = () => {
+            if (count < target) {
+                count += increment;
+                el.textContent = Math.floor(count);
+                requestAnimationFrame(updateCount);
+            } else {
+                el.textContent = target;
+            }
+        };
+
+        // Trigger animation when visible
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                updateCount();
+                observer.unobserve(el);
+            }
+        }, { threshold: 0.5 });
+        observer.observe(el);
+    });
+
     // Scroll Logic: Header & Progress Bar & Back to Top
     const header = document.getElementById('header');
     const scrollContainer = document.createElement('div');
